@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog - FlexStart Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <script src="assets/js/jQuery.js"></script>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Mobiscroll JS and CSS Includes -->
+  <link rel="stylesheet" href="assets/css/mobiscroll.javascript.min.css">
+  <script src="assets/js/mobiscroll.javascript.min.js"></script>
+
+  <!-- =======================================================
+  * Template Name: FlexStart
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/unipamplona60px.png" alt="">
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="https://www.suin-juriscol.gov.co/" target="_blank">SUIN</a></li>
+          <li><a class="getstarted scrollto" href="#about">Entrar</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Busqueda Avanzada</h5>
+            <button id="buscar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <form class="row g-3">
+              <div class="col-md-4">
+                <label for="inputState" class="form-label col-form-label-sm">Tipo de Norma</label>
+                <select id="inputState" class="form-select form-select-sm">
+                  <option selected></option>
+                  <option>Acuerdo</option>
+                  <option>Decreto</option>
+                  <option>Resolucion</option>
+                  <option>Ley</option>
+                </select>
+              </div>
+              <div class="col-8">
+                <label for="inputAddress2" class="form-label col-form-label-sm">Titulo de Norma</label>
+                <input type="text" class="form-control form-control-sm" id="inputAddress2"
+                  placeholder="Titulo de Norma">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label col-form-label-sm">Nombre del Documento</label>
+                <input type="text" class="form-control form-control-sm" id="inputAddress"
+                  placeholder="Nombre de Documento">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label col-form-label-sm">Fragmento de la Descripcion</label>
+                <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="Descripcion">
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label col-form-label-sm">Fecha de Emision</label>
+                <input type="date" class="form-control form-control-sm" id="inputEmail4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputState" class="form-label col-form-label-sm">Vigencia</label>
+                <select id="inputState" class="form-select form-select-sm">
+                  <option selected></option>
+                  <option>Vigente</option>
+                  <option>Derogado</option>
+                  <option>Modificada</option>
+                  <option>Adicionada</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label col-form-label-sm">Fecha Inicial de Publicacion</label>
+                <input type="date" class="form-control form-control-sm" id="inputEmail4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label col-form-label-sm">Fecha Final de Publicacion</label>
+                <input type="date" class="form-control form-control-sm" id="inputEmail4">
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin Modal-->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li>Buscar</li>
+        </ol>
+        <h2>Buscar Normas</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <div class="card">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-lg-9">
+                    <h5 class="card-title">Normativas</h5>
+                  </div>
+                  <div class="col-lg-3">
+                    <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                      data-bs-auto-close="outside">
+                      Filtrar por fecha
+                    </a>
+                    <div class="dropdown-menu">
+
+                      <form class="px-4 py-3">
+                        <div class="mb-3">
+                          <label for="exampleDropdownFormEmail1" class="form-label col-form-label-sm">
+                            Tipo de fecha
+                          </label>
+                          <select name="tipoFecha" id="tipoFecha" class="form-select form-select-sm">
+                            <option selected></option>
+                            <option>Creacion</option>
+                            <option>Expedicion</option>
+                            <option>Actualizacion</option>
+                          </select>
+                        </div>
+                        <div class="mb-2">
+                          <label for="exampleDropdownFormPassword1" class="form-label col-form-label-sm">Desde</label>
+                          <input type="date" class="form-control form-control-sm" id="exampleDropdownFormPassword1"
+                            placeholder="Password">
+                        </div>
+                        <div class="mb-2">
+                          <label for="exampleDropdownFormPassword1" class="form-label col-form-label-sm">Hasta</label>
+                          <input type="date" class="form-control form-control-sm" id="exampleDropdownFormPassword1"
+                            placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Filtrar</button>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bordered Table -->
+                <table class="table table-responsive table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Tipo Norma</th>
+                      <th scope="col">Norma</th>
+                      <th scope="col">Numero</th>
+                      <th scope="col">Estado</th>
+                      <th scope="col">Descripcion</th>
+                      <th scope="col">Emisor</th>
+                      <th scope="col">Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <a href="" title="Descargar"
+                          style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-cloud-arrow-down-fill"></i>
+                        </a>
+                        <a href="" title="Ver" style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </th>
+                      <td>Acuerdo</td>
+                      <td>ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</td>
+                      <td>002</td>
+                      <td>Vigente</td>
+                      <td>POR MEDIO DEL CUAL SE APRUEBA EL ACUERDO DE GASTOS DEL MES DE FEBRERO DE 1995</td>
+                      <td>Rectoria</td>
+                      <td>2020-01-01</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <a href="" title="Descargar"
+                          style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-cloud-arrow-down-fill"></i>
+                        </a>
+                        <a href="" title="Ver" style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </th>
+                      <td>Acuerdo</td>
+                      <td>ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</td>
+                      <td>002</td>
+                      <td>Vigente</td>
+                      <td>POR MEDIO DEL CUAL SE APRUEBA EL ACUERDO DE GASTOS DEL MES DE FEBRERO DE 1995</td>
+                      <td>Concejo Academico</td>
+                      <td>2020-01-01</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <a href="" title="Descargar"
+                          style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-cloud-arrow-down-fill"></i>
+                        </a>
+                        <a href="" title="Ver" style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </th>
+                      <td>Acuerdo</td>
+                      <td>ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</td>
+                      <td>002</td>
+                      <td>Vigente</td>
+                      <td>POR MEDIO DEL CUAL SE APRUEBA EL ACUERDO DE GASTOS DEL MES DE FEBRERO DE 1995</td>
+                      <td>Rectoria</td>
+                      <td>2020-01-01</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <a href="" title="Descargar"
+                          style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-cloud-arrow-down-fill"></i>
+                        </a>
+                        <a href="" title="Ver" style="align-items: center; justify-self: center; font-size: larger;">
+                          <i class="bi bi-eye-fill"></i>
+                        </a>
+                      </th>
+                      <td>Acuerdo</td>
+                      <td>ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</td>
+                      <td>002</td>
+                      <td>Vigente</td>
+                      <td>POR MEDIO DEL CUAL SE APRUEBA EL ACUERDO DE GASTOS DEL MES DE FEBRERO DE 1995</td>
+                      <td>Concejo Superior</td>
+                      <td>2020-01-01</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                <!-- End Bordered Table -->
+
+              </div>
+            </div>
+
+            <div class="blog-pagination">
+              <ul class="justify-content-center">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+              <h3 class="sidebar-title">Buscar</h3>
+
+              <!--<div mbsc-page class="sidebar-item search-form">
+                <div>
+                  <label>
+                    <input mbsc-input id="text" value="" data-dropdown="true" data-tags="true"
+                     data-theme="auto" placeholder="Seleccionar..." />
+                  </label>
+                </div>
+              </div>-->
+
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
+              <!--Button trigger modal-->
+              <div class="btn-modal">
+                <button type="button" class="btn btn-primar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Busqueda Avanzada
+                </button>
+              </div>
+
+              <div class="container">
+                <!-- Nav pills -->
+                <ul class="nav nav-pills" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#t-norma">Tipo Norma</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#organismos">Organismos</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div id="t-norma" class="container tab-pane active"><br>
+                    <div class="sidebar-item categories">
+                      <ul>
+                        <li><a href="#">General <span>(25)</span></a></li>
+                        <li><a href="#">Acuerdos <span>(12)</span></a></li>
+                        <li><a href="#">Decretos <span>(5)</span></a></li>
+                        <li><a href="#">Resoluciones <span>(22)</span></a></li>
+                        <li><a href="#">Leyes <span>(8)</span></a></li>
+                      </ul>
+                    </div><!-- End sidebar Tipo Norma-->
+                  </div>
+                  <div id="organismos" class="container tab-pane fade"><br>
+                    <div class="sidebar-item categories">
+                      <ul>
+
+                        <li><a href="#">General <span>(284)</span></a></li>
+                        <li><a href="#">Rectoria <span>(205)</span></a></li>
+                        <li><a href="#">Consejo Academico <span>(54)</span></a></li>
+                        <li><a href="#">Consejo Superior <span>(25)</span></a></li>
+                      </ul>
+                    </div><!-- End sidebar Organismos-->
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="sidebar-title">Normas Recientes</h3>
+              <div class="sidebar-item recent-posts">
+
+                <div class="post-item clearfix">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <i class="bi bi-file-earmark-pdf"></i>
+                    </div>
+                    <div class="col-lg-10">
+                      <h4><a href="blog-single.html">ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-item clearfix">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <i class="bi bi-file-earmark-pdf"></i>
+                    </div>
+                    <div class="col-lg-10">
+                      <h4><a href="blog-single.html">ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-item clearfix">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <i class="bi bi-file-earmark-pdf"></i>
+                    </div>
+                    <div class="col-lg-10">
+                      <h4><a href="blog-single.html">ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-item clearfix">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <i class="bi bi-file-earmark-pdf"></i>
+                    </div>
+                    <div class="col-lg-10">
+                      <h4><a href="blog-single.html">ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-item clearfix">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <i class="bi bi-file-earmark-pdf"></i>
+                    </div>
+                    <div class="col-lg-10">
+                      <h4><a href="blog-single.html">ACUERDO CONSEJO SUPERIOR NRO 002_01_02_1995</a></h4>
+                      <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Etiquetas</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">Docente</a></i></li>
+                  <li><a href="#">Sabatico</a></li>
+                  <li><a href="#">Vacaciones</a></li>
+                  <li><a href="#">Receso</a></li>
+                  <li><a href="#">Semana Santa</a></li>
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <div class="row">
+              <div class="col-6">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <img src="assets/img/escudounipamplona.png" alt="">
+                  <span></span>
+                </a>
+              </div>
+              <div class="col-6">
+                <p>
+                  <strong>Pamplona</strong><br>
+                  Km. 1 Vía Bucaramanga<br>
+                  Pamplona - N. de S. <br>
+                  <strong>Tel.:</strong> +7 5685303 <br><br>
+                  <!-- <strong>Correo:</strong> bienestaruniversitario@unipamplona.edu.co<br> -->
+                </p>
+
+                <p>
+                  <strong>Villa del Rosario</strong><br>
+                  Autopista Internacional<br>
+                  Villa del Rosario - N. de S. <br>
+                  <strong>Tel.:</strong> +7 5706966<br>
+                  <!-- <strong>Fax:</strong> +7 5703742<br> -->
+                  <!-- <strong>Correo:</strong> bienestarvillarosario@unipamplona.edu.co <br> -->
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Enlaces Útiles</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a target="_blank"
+                  href="https://www.unipamplona.edu.co/unipamplona/portalIG/home_1/recursos/rectoria/31032009/resoluciones.jsp">Rectoria</a>
+              </li>
+              <li><i class="bi bi-chevron-right"></i> <a target="_blank"
+                  href="https://www.unipamplona.edu.co/unipamplona/portalIG/home_71/recursos/planeacionv2/15092017/spei.jsp">SPEI</a>
+              </li>
+              <li><i class="bi bi-chevron-right"></i> <a target="_blank"
+                  href="https://www.unipamplona.edu.co/unipamplona/portalIG/home_1/recursos/universidad/consejo_superior/30062009/consejo_superior.jsp">Consejo
+                  Superior</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a target="_blank"
+                  href="https://www.unipamplona.edu.co/unipamplona/portalIG/home_1/recursos/universidad/consejo_academico/30062009/consejo_academico.jsp">Consejo
+                  Academico</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Redes Sociales</h4>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://twitter.com/Unipamplona" class="twitter"><i
+                  class="bi bi-twitter"></i></a>
+              <a target="_blank" href="https://web.facebook.com/unipamplona/?locale=es_LA&_rdc=1&_rdr"
+                class="facebook"><i class="bi bi-facebook"></i></a>
+              <a target="_blank" href="https://www.instagram.com/unipamplona/?hl=es" class="instagram"><i
+                  class="bi bi-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/school/unipamplona/?originalSubdomain=co"
+                class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Universidad de Pamplona</span></strong>. Todos los derechos reservados
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Diseñado por <a href="http://plataforma.unipamplona.edu.co/" target="_blank">CIADTI</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+  <script>
+
+    mobiscroll.setOptions({
+      locale: mobiscroll.localeEs,   // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+      theme: 'auto',                  // Specify theme like: theme: 'ios' or omit setting to use default
+      themeVariant: 'light'          // More info about themeVariant: https://docs.mobiscroll.com/5-23-0/javascript/select#opt-themeVariant
+    });
+
+    mobiscroll.select('#text', {
+      display: 'anchored',      // Specify display mode like: display: 'bottom' or omit setting to use default
+      itemHeight: 50,                // More info about itemHeight: https://docs.mobiscroll.com/5-23-0/javascript/select#opt-itemHeight
+      data: [{                       // More info about data: https://docs.mobiscroll.com/5-23-0/javascript/select#opt-data
+        text: 'Docente',
+        value: 1,
+      }, {
+        text: 'Sabatico',
+        value: 2,
+      }, {
+        text: 'Vacaciones',
+        value: 3,
+      }, {
+        text: 'Semana Santa',
+        value: 4,
+      }],
+      selectMultiple: true,          // More info about selectMultiple: https://docs.mobiscroll.com/5-23-0/javascript/select#opt-selectMultiple
+      renderItem: function (item) {  // More info about renderItem: https://docs.mobiscroll.com/5-23-0/javascript/select#opt-renderItem
+        return '<div class="md-image-text-name">' + item.display + '</div>';
+      },
+      filter: true,
+      animation: 'pop', // More info about tags: https://docs.mobiscroll.com/5-23-0/javascript/select#opt-tags
+    });
+  </script>
+
+</body>
+
+</html>
